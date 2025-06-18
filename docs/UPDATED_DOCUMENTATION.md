@@ -1,4 +1,15 @@
-Based on the provided diff, the environment variable configuration has been updated.
+A new section describing the updated functionality of the `autoDocAgent.js` has been added. The existing documentation on environment variables remains unchanged as it is still relevant.
+
+### Automated Documentation Agent (`autoDocAgent.js`)
+
+The `autoDocAgent.js` script has been enhanced to perform intelligent, incremental updates to the technical documentation. Previously, the agent would generate documentation from scratch. The new workflow is as follows:
+
+1.  **Reads Git Diff**: The agent retrieves the latest code changes using `git diff`.
+2.  **Loads Existing Documentation**: It now reads the current `docs/UPDATED_DOCUMENTATION.md` file to understand the existing content.
+3.  **Generates Intelligent Update**: Both the git diff and the existing documentation are sent to the Gemini AI model. The model is specifically prompted to **modify only the relevant sections** of the documentation, preserving the existing content that is still valid.
+4.  **Writes and Commits**: The updated Markdown is written back to the file, and the changes are automatically committed and pushed to the repository.
+
+This change ensures that documentation evolves with the codebase without losing context or requiring complete rewrites for minor changes.
 
 ### Environment Variable Configuration
 
