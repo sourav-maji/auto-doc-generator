@@ -5,10 +5,12 @@ import {
   createUser,
   updateUser,
   deleteUser,
+  healthCheck
 } from '../controllers/userController.js';
 
 const router = express.Router();
 
+router.get('/health', healthCheck);
 router.get('/', getUsers);
 router.get('/:id', getUserById);
 router.post('/', createUser);

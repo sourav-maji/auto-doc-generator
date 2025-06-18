@@ -1,6 +1,10 @@
 let users = [];
 let currentId = 1;
 
+export function healthCheck(req,res){
+  res.status(200).json({message:"Server is up and running"})
+}
+
 export function getUsers(req, res) {
   res.json(users);
 }
