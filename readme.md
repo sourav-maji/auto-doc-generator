@@ -33,7 +33,11 @@ npm install
 
 
 ```env
-GEMINI_API_KEY=your-api-key-here
+GOOGLE_GENAI_USE_VERTEXAI=FALSE
+GOOGLE_API_KEY=<<your API KEY>>
+GOOGLE_CLOUD_LOCATION = us-central1 <<or your region>>
+GOOGLE_CLOUD_PROJECT = <<your project id>>
+PROJECT_ID = <<your project id>>
 ```
 
 ## Running the App
