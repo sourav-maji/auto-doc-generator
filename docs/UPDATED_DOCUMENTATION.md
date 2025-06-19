@@ -3,6 +3,22 @@
 
 This document provides details on the available API endpoints.
 
+## Configuration
+
+To run this project, you need to set up your environment variables. Copy the `.env.example` file to a new file named `.env` and fill in the required values.
+
+```bash
+cp .env.example .env
+```
+
+The following variables are required:
+
+-   `GOOGLE_GENAI_USE_VERTEXAI`: Set to `TRUE` to use Vertex AI, or `FALSE` to use the standard Google Generative AI services.
+-   `GOOGLE_API_KEY`: Your API key for Google AI.
+-   `GOOGLE_CLOUD_LOCATION`: Your Google Cloud project region (e.g., `us-central1`).
+-   `GOOGLE_CLOUD_PROJECT`: Your Google Cloud project ID.
+-   `PROJECT_ID`: Your Google Cloud project ID.
+
 ## API Endpoints
 
 ### `GET /health`
