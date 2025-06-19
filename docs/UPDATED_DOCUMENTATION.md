@@ -19,6 +19,19 @@ The following variables are required:
 -   `GOOGLE_CLOUD_PROJECT`: Your Google Cloud project ID.
 -   `PROJECT_ID`: Your Google Cloud project ID.
 
+## Automated Documentation
+
+This project includes an AI-powered agent that automatically updates this documentation. The agent, defined in `ai/autoDocAgent.js`, has been refactored for better modularity and robustness.
+
+### How It Works
+
+1.  **Detects Changes**: The agent runs `git diff HEAD~1 HEAD` to find recent code changes. If no changes are found, it exits.
+2.  **Generates Updates**: It sends the code diff and the current documentation to the Google Gemini Pro model, prompting it to intelligently update only the relevant sections.
+3.  **Applies Changes**: The AI returns an updated version of the documentation. The script checks if the changes are significant before writing the new content to `docs/UPDATED_DOCUMENTATION.md`.
+4.  **Commits and Pushes**: Finally, the agent automatically adds, commits, and pushes the updated documentation file to the repository.
+
+This process, now featuring improved logging and error handling, ensures that the API documentation stays in sync with the source code with minimal manual intervention.
+
 ## API Endpoints
 
 ### `GET /health`
