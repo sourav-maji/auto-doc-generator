@@ -87,7 +87,7 @@ After pushing a change (e.g., new route added), run:
 ```
 The agent will:
 
-1. Fetch git diff
+1. Fetch git diff 
 2. Use Gemini to analyze the diff and the current documentation
 3. Update the relevant sections only
 4. Commit and push the new UPDATED_DOCUMENTATION.md
