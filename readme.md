@@ -34,6 +34,7 @@
 ---
 
 ## 📁 Directory Structure
+```bash
 crud-backend/
 ├── ai/
 │ └── autoDocAgent.js # Core AI doc generator logic
@@ -47,7 +48,7 @@ crud-backend/
 ├── package.json
 ├── .env
 └── README.md # You're reading this!
-
+```
 
 ---
 
